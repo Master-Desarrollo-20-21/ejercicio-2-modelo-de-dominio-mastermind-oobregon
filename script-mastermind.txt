@@ -1,0 +1,23 @@
+@startuml
+Mastermind *-- "2" Jugador
+Jugador *-- Objetivo
+Objetivo --> Clave
+Objetivo .. Propuesta
+Objetivo : comparar(Clave,Propuesta)
+Mastermind *-- Turno
+Turno --> "2" Jugador
+Mastermind *-- Tablero
+Jugador <|-- Creador
+Jugador <|-- Acertador
+Jugador --> Tablero
+Tablero *-- "5x8" Casilla
+Casilla : int posicion
+Combinación *-- "5" Casilla
+Combinación *-- "5" Color 
+Combinación <|-- Clave
+Combinación <|-- Propuesta
+Acertador o-- "*" Propuesta
+Creador --> "1" Clave
+Propuesta o-- "5" Color
+Propuesta o-- "5" Casilla
+@enduml
