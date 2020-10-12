@@ -20,4 +20,5 @@ Acertador o-- "*" Propuesta
 Creador --> "1" Clave
 Propuesta o-- "5" Color
 Propuesta o-- "5" Casilla
+note left of Casilla : 5x1 para Clave\n5x7 para Propuesta
 @enduml
